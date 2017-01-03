@@ -1,0 +1,46 @@
+<div ng-include="'views/menu.html'"></div>
+<div class="row panel panel-default home-conteiner">
+	<div class="panel-body" ng-controller="MenuController as menu">
+
+		<div class="row">
+			<div class="col-xs-6 col-md-2" ng-repeat="menuItem in menu.menus " ng-if="menuItem.alias!='home'&&menuItem.alias!='users'">
+				<a href="{{menuItem.url}}" class="thumbnail">
+					<img src="img/{{menuItem.alias}}.png" alt="...">
+					<h4>{{menuItem.name}}</h4>
+				</a>
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md-12">
+				<p style="font-weight: bold;font-size: 14px;">Available Staff Today ( Dec. 2016 )</p>
+				<div >
+
+					<table class="table">
+						<caption>Available Doctors</caption>
+						<tr>
+							<td><a>Dr. Leonard C Mpande</a></td>
+						</tr>
+						<tr>
+							<td><a>Dr. Amani Yahya Yunge</a></td>
+						</tr>
+
+					</table>
+					<br/>
+					<table class="table">
+						<caption>Available Nurses</caption>
+						<tr>
+							<td><a>Nurse. Hayuna Ally</a></td>
+						</tr>
+						<tr>
+							<td><a>Nurse. Pendo Alex</a></td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div ng-include="'views/footer.html'"></div>

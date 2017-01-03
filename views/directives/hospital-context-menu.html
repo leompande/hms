@@ -1,0 +1,23 @@
+<style>
+    li{
+        background-color: #ffffff;
+        border: 2px #cccccc;
+        list-style: none;
+        text-align: center;
+    }
+li.list-group-item:hover{
+    background-color: #cccccc;
+
+}
+</style>
+<div style="display:none;z-index: 100;position: absolute;left:{{currentPosition.x}}px;top:{{currentPosition.y}}px;">
+
+    <ul class="list-group"
+        style="-webkit-box-shadow: 5px 5px 16px ;-moz-box-shadow: 5px 5px 16px;box-shadow: 5px 5px 16px;min-width:150px;border-top:1px solid #cccccc;"
+    >
+        <li style="font-weight: bold">Menu</li>
+        <li class="list-group-item" style="cursor: pointer;"><i class="fa fa-edit"></i> &nbsp;Edit</li>
+        <li class="list-group-item" style="cursor: pointer;"><i class="fa fa-times"></i> &nbsp;Delete</li>
+        <li class="list-group-item" style="cursor: pointer;"><i class="fa fa-search"></i> &nbsp;View</li>
+    </ul>
+</div>

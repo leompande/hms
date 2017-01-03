@@ -1,0 +1,11 @@
+{
+    "version": "0.1",
+    "name": "Hospital Management Software",
+    "description": "Hospital Management Software",
+    "launch_path": "index.html",
+    "developer": {
+        "name": "PS",
+        "url": ""
+    },
+    "default_locale": "en"
+}

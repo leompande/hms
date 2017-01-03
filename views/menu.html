@@ -1,0 +1,48 @@
+<div  ng-controller="MenuController as menu">
+<div class="row">
+  <br/>
+  <div class="col-md-1" style="padding-left: 0px!important;">
+    <a class="navbar-brand pull-left" style="padding: 0px 0px!important;" href="#/">
+      <img src="img/logo.png" style="height:70px;width:100px;" alt="Hospital Management System" />
+    </a>
+  </div>
+  <div class="col-md-5" style="padding-left: 0px!important;vertical-align:50%">
+    
+    <!--<a class="navbar-brand pull-left" style="padding: 0px 0px!important;" href="#/">-->
+      <!--Hospital Management System-->
+    <!--</a>-->
+  </div>
+  <div class="col-md-6" style="padding-right: 0px!important;">
+    <a class="pull-right" href="#/profile"><i class="fa fa-user"></i>&nbsp;Leonard C Mpande</a>
+  </div>
+
+</div>
+
+  <br/>
+<div class="row">
+  <nav class="navbar navbar-default" bs-navbar >
+    <div class="container-fluid bbnav">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ng-repeat="menu in menu.menus" class="{{menu.state}}"><a href="{{menu.url}}" ><b>{{menu.name}}</b></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right list-inline">
+          <li class="{{menu.settings.state}}"><a id="setting" href="#/settings/settings-system-setting"  ><i class="fa fa-cog"></i>&nbsp;{{'Settings'}}</a></li>
+          <li><a id="btn-help" href="#/help"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> {{'Help'}}</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</div>
+</div>

@@ -1,0 +1,35 @@
+<div id="rootwizard">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="col-md-12">
+                <ul>
+                    <li ng-repeat="wizard in wizards" class="{{wizard.status}}">
+                        <a href="#/reception/reception-patient-registration/{{wizard.alias}}" ng-click="togglePatientForm($index)">{{wizard.name}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress progress-striped active">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{percentage}}" aria-valuemin="0" aria-valuemax="100" style="width:{{percentage}}%;">
+            {{percentage}}%
+        </div>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane {{wizard.status}}" ng-repeat="wizard in wizards" >
+            <p style="font-size: 14px;font-weight: bold">{{wizard.name}}</p>
+            <hr/>
+            <ng-include src="wizard.templateUrl"></ng-include>
+        </div>
+        <ul class="pager wizard">
+            <li class="previous"><a  href="#/reception/reception-patient-registration/{{previous}}">Previous</a></li>
+            <li class="next"><a href="#/reception/reception-patient-registration/{{next}}">Next</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#rootwizard').bootstrapWizard();
+    });
+</script>

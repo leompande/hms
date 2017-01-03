@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-5 col-xs-5">
+        <div class="form-group">
+            <label for="available">Available Authorities</label>
+            <select type="text" class="form-control" style="height:200px;" ng-model="modelAvalableAuthorities" id="available" multiple="multiple">
+                <option value="{{authority}}" ng-repeat="authority in availableAuthorities"  ng-dblclick="doubleClickAvailableAuthority($index)">
+                    {{authority.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-2 col-xs-2">
+        <br/>
+        <br/>
+        <br/>
+        <ul style="list-style: none">
+            <li>
+                <a class="btn btn-default" ng-click="moveOneRight(modelAvalableAuthorities)">
+                    <i class="fa fa-angle-right"></i>&nbsp;
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-default">
+                    <i class="fa fa-angle-left"></i>&nbsp;
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-default" ng-click="shiftAllToTheRight()">
+                    <i class="fa fa-angle-double-right"></i>
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-default" ng-click="shiftAllToTheLeft()">
+                    <i class="fa fa-angle-double-left"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5 col-xs-5">
+        <div class="form-group">
+            <label for="selected">Selected Authorities</label>
+            <select  type="text" class="form-control" style="height:200px;" ng-model="modelSelectedAuthorities" id="selected" multiple="multiple">
+                <option ng-repeat="authority in selectedAuthorities"  ng-dblclick="doubleClickSelectedAuthority($index)">
+                    {{authority.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+</div>

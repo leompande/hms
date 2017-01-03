@@ -1,0 +1,15 @@
+<div ng-include="'views/menu.html'"></div>
+<div class="row panel panel-default home-conteiner">
+    <div class="panel-body" ng-controller="SettingsController as settings">
+
+        <div class="row">
+            <div class="col-xs-12 col-md-3">
+                <hospital-left-menu menus="settings.menus"></hospital-left-menu>
+            </div>
+            <div class="col-xs-12 col-md-9">
+                <ng-include src="settings.templateUrl"></ng-include>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'views/footer.html'"></div>

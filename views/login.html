@@ -1,0 +1,53 @@
+<div class="row">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="col-md-4 col-md-offset-4" style="text-align: center;">
+        <h4>HOSPITAL MANAGEMENT SYSTEM</h4>
+    </div>
+</div>
+<div class="row" style="font-size: 10px;" >
+    <div class="col-md-4 col-md-offset-4">
+        <br/>
+        <br/>
+        <div class="panel panel-default home-conteiner">
+            <div class="panel-body">
+                <h4 style="text-align: center;">Login</h4>
+                <br/>
+                <br/>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <form name="login" ng-submit="user.authenicateUser(credentials)">
+
+
+
+                            <div class="input-group margin-bottom-lg">
+                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                <input type="email" class="form-control" ng-model="credentials.email" ng-required="true" id="email" placeholder="Email Address">
+                            </div>
+                            <br/>
+                            <div class="input-group ">
+                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                <input type="password" class="form-control" ng-model="credentials.password" ng-required="true" id="password" placeholder="Password">
+                            </div>
+                            <div class="checkbox">
+                                <label style="font-size: 15px;">
+                                    <a href="#/forgot-password">Forgot Password?</a>
+                                </label>
+                            </div>
+                            <div ng-if="user.message.show&&user.message.isPositive" class="alert alert-success" role="alert">{{user.message.body}}</div>
+                            <div ng-if="user.message.show&&!user.message.isPositive" class="alert alert-danger" role="alert">{{user.message.body}}, Wrong <b>username</b> or <b>password</b></div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+                <br/>
+                <br/>
+            </div>
+        </div>
+
+    </div>
+
+</div>

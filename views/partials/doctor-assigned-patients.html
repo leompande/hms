@@ -1,0 +1,24 @@
+<div class="row" >
+    <div class="col-md-12">
+        <p style="font-weight: bold;font-size:14px;">Assigned Patients</p>
+        <p style="color:#cccccc;">List of patients from laboratory.</p>
+        <hr style="border: 1px solid #cccccc;"/>
+    </div>
+    <div class="col-md-12">
+        <table class="table table-hover" datatable="" >
+            <thead>
+            <tr>
+                <th>Med. Rec. NO.</th>
+                <th>Name</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Marital Status</th>
+                <th>Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="patient in doctor.patients"></tr>
+            </tbody>
+        </table>
+    </div>
+</div>

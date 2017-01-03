@@ -1,0 +1,26 @@
+<div class="row" >
+    <div class="col-md-12">
+        <p style="font-weight: bold;font-size:14px;">New Role</p>
+        <p style="color:#cccccc;">Creating new user role</p>
+        <hr style="border: 1px solid #cccccc;"/>
+    </div>
+    <div class="col-md-12">
+        <form name="newRole" class="" >
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" ng-model="settings.roleObject.name" name="name" id="name" placeholder="Name">
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+            <hospital-twosided-multiselect data="settings.authorities"></hospital-twosided-multiselect>
+
+        <a class="btn btn-success" ng-click="settings.createRole(settings.roleObject)"><i class="fa fa-plus-square"></i>&nbsp;Create</a>
+        <a class="btn btn-danger" href="#/settings/settings-user-role"><i class="fa fa-cut"></i>&nbsp;Cancel</a>
+        </form>
+    </div>
+</div>
